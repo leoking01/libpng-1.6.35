@@ -58,14 +58,14 @@ endif()
 add_library(png SHARED IMPORTED)
 
 set_target_properties(png PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/win10/aspDep14/zlib1211/install/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/win10/aspDep14/zlib1211/install/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/win10/aspDep14/zlib/zlib_1.2.11.0_MSVC_19.0.24210.0_install/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/win10/aspDep14/zlib/zlib_1.2.11.0_MSVC_19.0.24210.0_install/lib/zlibd.lib>"
 )
 
 # Create imported target png_static
 add_library(png_static STATIC IMPORTED)
 
 set_target_properties(png_static PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/win10/aspDep14/zlib1211/install/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/win10/aspDep14/zlib1211/install/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/win10/aspDep14/zlib/zlib_1.2.11.0_MSVC_19.0.24210.0_install/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/win10/aspDep14/zlib/zlib_1.2.11.0_MSVC_19.0.24210.0_install/lib/zlibd.lib>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
